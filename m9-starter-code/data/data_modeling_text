@@ -1,0 +1,42 @@
+Data Modeling
+
+Department
+-
+"dept_no" string
+"dept_name" string
+"departments_pk" PK string
+
+Title
+-
+"title_id" string
+"title" string
+"titles_pk" PK string FK >- Employees.emp_no
+
+Employees
+-
+"emp_no" int
+"emp_title_id" string
+"birth_date" string
+"first_name" string
+"last_name" string
+"sex" string
+"hire_date" date
+"employees_pk" PK int FK >- Salaries.salaries_pk
+
+Salaries
+- 
+"emp_no" int
+"salary" int
+"salaries_pk" PK int
+
+EmployeeDepartment
+-
+"id" PK int FK >- Salaries.salaries_pk
+"emp_no" int
+"dept_no" string
+
+ManagerDepartment
+-
+"dept_no" string
+"emp_no" int
+"mgr_dept_pk" PK int FK >- Department.departments_pk
