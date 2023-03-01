@@ -35,7 +35,6 @@ CREATE TABLE "titles" (
 CREATE TABLE "employees" (
     "emp_no" INT NOT NULL,
     -- Employees have a title id employees(emp_title_id)
-    -- So, this id has relationship with the composite foreign key titles(title_id)
     "emp_title_id" VARCHAR NOT NULL,
     "birth_date" DATE NOT NULL, -- Employee's birth date
     "first_name" VARCHAR NOT NULL, -- Employee's first name
